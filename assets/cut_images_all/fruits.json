@@ -1,0 +1,36 @@
+{"frames": {
+
+"image_part_047.png":
+{
+	"frame": {"x":0,"y":0,"w":20,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
+	"sourceSize": {"w":20,"h":20}
+},
+"image_part_048.png":
+{
+	"frame": {"x":20,"y":0,"w":20,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
+	"sourceSize": {"w":20,"h":20}
+},
+"image_part_115.png":
+{
+	"frame": {"x":40,"y":0,"w":20,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
+	"sourceSize": {"w":20,"h":20}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "fruits.png",
+	"format": "RGBA8888",
+	"size": {"w":60,"h":20},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:05e6797a2984f53b3ca305973ea705ff:b1aa4b01a12c4b458047f312a9e6eef6:172f4cb6aa93906862485b1299e80945$"
+}
+}

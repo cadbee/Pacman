@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "Crackman";
+    src: local("Crackman"),
+    url("/assets/fonts/crackman/tt/crackman.ttf");
+}
+
+
+html {
+    height: 96vh;
+}
+
+body {
+    cursor: url("/assets/pac_cursor.gif"), auto;
+    display: flex;
+    align-items: center;
+    border: 4px solid black;
+    min-height: 98vh;
+    padding: 0;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    opacity: 0.9;
+    font-family: 'Crackman' !important;
+    text-shadow: 1px 1px 1px yellow;
+    padding: 5px;
+    border-radius: 8px;
+    border: 5px dotted #cd7bff;
+    background: rgba(205, 123, 255, 0.11);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    max-height: 100%;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+
+body::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background-image: url('../assets/b2.jpg');
+    background-size: cover;
+    filter: blur(2px) opacity(0.8) brightness(0.5) drop-shadow(0 0 0.75rem black);
+}
+
+input[type=text] {
+    font-family: 'Crackman';
+    max-width: 200px;
+    padding: 1px 10px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 120%;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.name_input {
+    text-shadow: 1px 1px 1px yellow;
+    position: relative;
+    color: white; /* Красный цвет символов */
+    font-size: 180%; /* Размер шрифта в процентах */
+    top: 2px;
+}
+
+/*#goButton{*/
+/*  color: yellow;*/
+/*  margin: 2%;*/
+/*  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+/*  border-radius: 12px;*/
+/*  background-color: #cd7bff;*/
+/*  border: #080808;*/
+/*  font-size: 20px;*/
+/*  padding: 10px 20px 10px 20px;*/
+/*}*/
+/*#goButton:hover{*/
+/*  transform: scale(1.1);*/
+/*}*/
+
+
+/* CSS */
+@keyframes shake {
+    0% {
+        transform: scale(0.75) translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: scale(0.75) translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: scale(0.75) translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: scale(0.75) translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: scale(0.75) translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: scale(0.75) translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: scale(0.75) translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: scale(0.75) translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: scale(0.75) translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: scale(0.75) translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: scale(0.75) translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+#goButton,
+#goButton:after {
+    opacity: 0.8;
+    text-shadow: 1px 1px 1px yellow;
+    transform: scale(0.7);
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-family: 'Crackman', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, rgba(192, 1, 255, 0.79) 5%);
+    border: 0;
+    color: #fff;
+    font-size: 200%;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px rgba(238, 0, 246, 0.8);
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 10px;
+}
+
+#goButton:after {
+    transform: scale(0.7);
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    font-size: 30px;
+    content: 'PAC MAN';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, rgba(255, 243, 0, 0.86) 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    border-radius: 5px;
+    clip-path: var(--slice-0);
+}
+
+
+#goButton:hover {
+    cursor: url("/assets/pac_cursor.gif"), auto;
+
+    /* Запустите анимацию встряхивания и сделайте так, чтобы анимация длилась 0,5 секунды */
+    animation: shake 0.5s;
+
+    /* Когда анимация будет закончена, начните снова */
+    animation-iteration-count: infinite;
+    transform: scale(0.7);
+}
+
+#goButton:hover:after {
+    animation: 2s glitch;
+    animation-timing-function: steps(2, end);
+    animation-iteration-count: infinite;
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@media (min-width: 768px) {
+    #goButton,
+    #goButton:after {
+        width: 200px;
+        height: 86px;
+        line-height: 88px;
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    text-align: center;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 120%;
+    padding: 5px;
+    border: 1px dotted #cd7bff;
+}
+
+th, td {
+    width: 300px;
+}
