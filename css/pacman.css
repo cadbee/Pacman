@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Crackman";
     src: local("Crackman"),
-    url("/assets/fonts/crackman/tt/crackman.ttf");
+    url("../assets/fonts/crackman/tt/crackman.ttf");
 }
 
 body {
-    cursor: url("/assets/pac_cursor.gif"), auto;
+    cursor: url("../assets/pac_cursor.gif"), auto;
 
     background-color: rgb(255, 255, 255);
     height: 98vh;

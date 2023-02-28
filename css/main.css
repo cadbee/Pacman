@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Crackman";
     src: local("Crackman"),
-    url("/assets/fonts/crackman/tt/crackman.ttf");
+    url("../assets/fonts/crackman/tt/crackman.ttf");
 }
 
 
@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    cursor: url("/assets/pac_cursor.gif"), auto;
+    cursor: url("../assets/pac_cursor.gif"), auto;
     display: flex;
     align-items: center;
     border: 4px solid black;
@@ -171,7 +171,7 @@ input[type=text] {
 
 
 #goButton:hover {
-    cursor: url("/assets/pac_cursor.gif"), auto;
+    cursor: url("../assets/pac_cursor.gif"), auto;
 
     /* Запустите анимацию встряхивания и сделайте так, чтобы анимация длилась 0,5 секунды */
     animation: shake 0.5s;
